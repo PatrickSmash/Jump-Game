@@ -10,6 +10,7 @@ size = Vector2(116.75, 80.5)
 collision_layer = 2
 script = ExtResource("1_ic1xn")
 sprite_frames = ExtResource("2_l6hhd")
+flag_position = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
@@ -18,7 +19,7 @@ position = Vector2(92, -63)
 scale = Vector2(4, 4)
 sprite_frames = ExtResource("2_l6hhd")
 animation = &"up"
-frame_progress = 0.440117
+frame_progress = 0.390419
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(57.625, -38.75)

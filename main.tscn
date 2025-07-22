@@ -103,11 +103,13 @@ scale = Vector2(2, 2)
 transform = Transform2D(2, 0, 0, 2, 0, 750)
 tint = Color(0.569993, 0.558956, 0.878091, 1)
 
-[node name="GameLogic" parent="." instance=ExtResource("3_xbkvd")]
+[node name="GameLogic" parent="." node_paths=PackedStringArray("flag_to_win") instance=ExtResource("3_xbkvd")]
 win_by_collecting_coins = true
+coins_to_win = 21
 win_by_reaching_flag = true
+flag_to_win = NodePath("../Flag")
 time_limit = 60
-gravity = 1300.0
+gravity = 1290.0
 
 [node name="Dangerzone" parent="." instance=ExtResource("4_2mg6t")]
 position = Vector2(3067, 1160)
@@ -188,7 +190,7 @@ one_way = true
 fall_time = 0.0
 
 [node name="Player" parent="." instance=ExtResource("2_7yl00")]
-position = Vector2(224, 246)
+position = Vector2(391, 254)
 collision_layer = 1
 collision_mask = 7
 sprite_frames = ExtResource("7_ycdy4")
@@ -218,8 +220,7 @@ dragon_y_offset = -110.0
 [node name="HUD" parent="." instance=ExtResource("6_mp7wy")]
 
 [node name="Flag" parent="." instance=ExtResource("12_dkbog")]
-position = Vector2(21705, -515)
-flag_position = 1
+position = Vector2(21707, -516)
 
 [node name="Dragon" type="Node2D" parent="."]
 
@@ -239,140 +240,127 @@ flip_h = true
 modulate = Color(1, 1, 0, 1)
 position = Vector2(1578, -854)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin3" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(834, -78)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin5" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(1094, -337)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin7" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(836, -595)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin14" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(1121, -856)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin21" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(2054, -853)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin16" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(2366, -588)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin18" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(2628, -337)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin19" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(2366, -90)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin20" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(2733, 303)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin22" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(3513, 176)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin17" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(4293, 28)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin23" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(5058, -99)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin24" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(5827, -230)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin25" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(6590, -220)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin26" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(7107, -470)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin27" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(7616, -729)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin28" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(8128, -476)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin29" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(9153, -463)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin30" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(10170, -465)
 sprite_frames = SubResource("SpriteFrames_htxhm")
-animation_name = "default"
+tint = Color(1, 1, 0, 1)
+
+[node name="Coin31" parent="Coins" instance=ExtResource("5_u7hr5")]
+visible = false
+modulate = Color(1, 1, 0, 1)
+position = Vector2(21766, -552)
+sprite_frames = SubResource("SpriteFrames_htxhm")
 tint = Color(1, 1, 0, 1)
 
 [node name="Enemies" type="Node2D" parent="."]

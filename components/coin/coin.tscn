@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://daf24t18h3n5e"]
+[gd_scene load_steps=13 format=3 uid="uid://daf24t18h3n5e"]
 
 [ext_resource type="Script" uid="uid://b4j8f10agdcvu" path="res://scripts/coin.gd" id="1_4bks0"]
 [ext_resource type="Texture2D" uid="uid://cwud08koel0y3" path="res://assets/goldCoin/goldCoin1.png" id="2_sck8e"]
@@ -46,41 +46,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_fjpdi"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_sck8e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_mfmg1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_gvdxu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_a1xy7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_rqgnt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_qejfk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_u7iln")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_qqkwe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_jgq0e")
-}],
-"loop": true,
-"name": &"default",
-"speed": 11.0
-}]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_5w0o8"]
 radius = 40.0125
 
@@ -88,14 +53,12 @@ radius = 40.0125
 collision_layer = 2
 script = ExtResource("1_4bks0")
 sprite_frames = SubResource("SpriteFrames_sck8e")
-animation_name = null
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 texture_filter = 1
 scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_fjpdi")
-frame_progress = 0.283541
+sprite_frames = SubResource("SpriteFrames_sck8e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_5w0o8")
