@@ -1,0 +1,15 @@
+TouchScreenButton
+AnimatedSprite2D
+Node2D
+AudioStreamPlayer2D
+ParallaxBackground
+ParallaxLayer
+CanvasLayer
+TileMapLayer
+Sprite2D
+GameLogic
+Control
+Container
+BoxContainer
+TextureRect
+Timer
