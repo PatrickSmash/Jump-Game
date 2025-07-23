@@ -1,0 +1,177 @@
+[gd_scene load_steps=9 format=3 uid="uid://b7tknrqk8key3"]
+
+[ext_resource type="Script" uid="uid://bfpyq1fv33awx" path="res://control.gd" id="1_cjnew"]
+[ext_resource type="Texture2D" uid="uid://dxvhx5uytcgaw" path="res://assets/New free backgrounds part1/background 1/3.png" id="2_8pdex"]
+[ext_resource type="Texture2D" uid="uid://4qsjka6ati11" path="res://assets/ParallaxSunset/Sunset/6.png" id="2_goadl"]
+[ext_resource type="Texture2D" uid="uid://dwmb06dwmw1c" path="res://assets/Flying Demon 2D Pixel Art/Flying Demon 2D Pixel Art/Sprites/with_outline/IDLE.png" id="2_hxypl"]
+[ext_resource type="FontFile" uid="uid://2tsirj4ygeh2" path="res://assets/Press_Start_2P/PressStart2P-Regular.ttf" id="3_o0614"]
+[ext_resource type="Texture2D" uid="uid://bu2r4oaetirma" path="res://assets/966ec447-f12f-4aaf-a693-78ab3e3c6e65-removebg-preview.png" id="4_hxypl"]
+[ext_resource type="AudioStream" uid="uid://rb00ympr5328" path="res://assets/spaceship-arcade-shooter-game-background-soundtrack-318508.mp3" id="7_jtfbd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxypl"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+
+[node name="TitleScreen" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cjnew")
+
+[node name="Background" type="ColorRect" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1980.0
+offset_bottom = 1090.0
+color = Color(0.00392157, 0.00392157, 0.294118, 1)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(1700, 241)
+scale = Vector2(5.60563, 5.60563)
+texture = ExtResource("2_hxypl")
+region_enabled = true
+region_rect = Rect2(161, 0, 83, 71)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(270, 241)
+scale = Vector2(5.60563, 5.60563)
+texture = ExtResource("2_hxypl")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(161, 0, 83, 71)
+
+[node name="GameTitle" type="Label" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 600.0
+offset_top = 200.0
+offset_right = 1400.0
+offset_bottom = 473.0
+theme_override_fonts/font = ExtResource("3_o0614")
+theme_override_font_sizes/font_size = 200
+text = "WSHY"
+horizontal_alignment = 1
+
+[node name="BeginButton" type="Button" parent="Control"]
+texture_filter = 1
+layout_mode = 2
+offset_top = 563.0
+offset_right = 1980.0
+offset_bottom = 776.0
+theme_override_fonts/font = ExtResource("3_o0614")
+theme_override_font_sizes/font_size = 128
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxypl")
+text = "Start"
+
+[node name="StoryText" type="RichTextLabel" parent="Control"]
+visible = false
+texture_filter = 1
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_left = 56.0
+offset_top = 90.0
+offset_right = 1932.0
+offset_bottom = 612.0
+theme_override_fonts/normal_font = ExtResource("3_o0614")
+theme_override_font_sizes/normal_font_size = 44
+text = "You're training on floating platforms in a beautiful meadow.
+
+The Twist: Your jumps accidentally awaken an ancient dragon sleeping beneath the hills
+
+The Challenge: Now you must escape across the platforms as the world is dark and dangerous."
+fit_content = true
+horizontal_alignment = 1
+
+[node name="PlayButton" type="Button" parent="Control"]
+visible = false
+texture_filter = 1
+layout_mode = 2
+offset_top = 563.0
+offset_right = 1980.0
+offset_bottom = 776.0
+theme_override_fonts/font = ExtResource("3_o0614")
+theme_override_font_sizes/font_size = 128
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxypl")
+text = "Play"
+
+[node name="MenuMusic" type="AudioStreamPlayer2D" parent="Control"]
+texture_filter = 1
+stream = ExtResource("7_jtfbd")
+volume_db = 3.0
+
+[node name="Images" type="Node2D" parent="."]
+
+[node name="Sprite2D4" type="Sprite2D" parent="Images"]
+position = Vector2(0, 400)
+scale = Vector2(1.8, 2)
+texture = ExtResource("2_8pdex")
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2(145, 0, 431, 324)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Images"]
+position = Vector2(1204, 400)
+scale = Vector2(1.8, 2)
+texture = ExtResource("2_8pdex")
+centered = false
+region_enabled = true
+region_rect = Rect2(145, 0, 431, 324)
+
+[node name="Sprite2D" type="Sprite2D" parent="Images"]
+modulate = Color(3.46541e-06, 0, 0.763621, 1)
+texture_filter = 1
+position = Vector2(480, 910)
+scale = Vector2(3, 3)
+texture = ExtResource("2_goadl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Images"]
+modulate = Color(3.46541e-06, 0, 0.763621, 1)
+texture_filter = 1
+position = Vector2(993, 910)
+scale = Vector2(3, 3)
+texture = ExtResource("2_goadl")
+region_enabled = true
+region_rect = Rect2(249, 0, 22, 180)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Images"]
+modulate = Color(3.46541e-06, 0, 0.763621, 1)
+texture_filter = 1
+position = Vector2(1500, 910)
+scale = Vector2(3, 3)
+texture = ExtResource("2_goadl")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Images"]
+modulate = Color(2.64719e-07, 0, 0.462568, 1)
+texture_filter = 1
+position = Vector2(817, 780)
+scale = Vector2(2.7, 2.25)
+texture = ExtResource("4_hxypl")
+centered = false
+flip_v = true
+
+[node name="Sprite2D8" type="Sprite2D" parent="Images"]
+modulate = Color(2.64719e-07, 0, 0.462568, 1)
+texture_filter = 1
+position = Vector2(300, 780)
+scale = Vector2(2.7, 2.25)
+texture = ExtResource("4_hxypl")
+centered = false
+flip_v = true
+
+[node name="Sprite2D7" type="Sprite2D" parent="Images"]
+modulate = Color(2.64719e-07, 0, 0.462568, 1)
+texture_filter = 1
+position = Vector2(-307, 780)
+scale = Vector2(2.7, 2.25)
+texture = ExtResource("4_hxypl")
+centered = false
+flip_v = true
